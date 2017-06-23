@@ -8,12 +8,12 @@ cmake_minimum_required(VERSION 2.8.12)
 project(RE2 CXX)
 include(CTest)
 
-option(BUILD_SHARED_LIBS "build shared libraries" OFF)
-option(USEPCRE "use PCRE in tests and benchmarks" OFF)
+option(RE2_BUILD_SHARED_LIBS "build shared libraries" OFF)
+option(RE2_USEPCRE "use PCRE in tests and benchmarks" OFF)
 
 # CMake seems to have no way to enable/disable testing per subproject,
 # so we provide an option similar to BUILD_TESTING, but just for RE2.
-option(RE2_BUILD_TESTING "enable testing for RE2" ON)
+option(RE2_BUILD_TESTING "enable testing for RE2" OFF)
 
 set(EXTRA_TARGET_LINK_LIBRARIES)
 
@@ -21,7 +21,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
   if(MSVC_VERSION LESS 1800)
     message(FATAL_ERROR "you need Visual Studio 2013 or later")
   endif()
-  if(BUILD_SHARED_LIBS)
+  if(RE2_BUILD_SHARED_LIBS)
     # See http://www.kitware.com/blog/home/post/939 for details.
     cmake_minimum_required(VERSION 3.4)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
@@ -52,7 +52,7 @@ ELSEIF ( UNIX AND "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel" )
     ADD_DEFINITIONS("-w")
 ENDIF () # COMPILER TYPE
 
-if(USEPCRE)
+if(RE2_USEPCRE)
   add_definitions(-DUSEPCRE)
   list(APPEND EXTRA_TARGET_LINK_LIBRARIES pcre)
 endif()
