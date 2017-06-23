@@ -8,7 +8,9 @@ cmake_minimum_required(VERSION 2.8.12)
 project(RE2 CXX)
 include(CTest)
 
-option(RE2_BUILD_SHARED_LIBS "build shared libraries" OFF)
+# BUILD_SHARED_LIBS is a standard CMake variable, but we declare it here to
+# make it prominent in the GUI.
+option(BUILD_SHARED_LIBS "Build shared libraries (DLLs)." OFF)
 option(RE2_USEPCRE "use PCRE in tests and benchmarks" OFF)
 
 # CMake seems to have no way to enable/disable testing per subproject,
@@ -147,5 +149,5 @@ set(RE2_HEADERS
     re2/stringpiece.h
     )
 
-install(FILES ${RE2_HEADERS} DESTINATION include/re2)
-install(TARGETS re2 ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+# install(FILES ${RE2_HEADERS} DESTINATION include/re2)
+# install(TARGETS re2 ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
