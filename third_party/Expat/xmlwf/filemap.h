@@ -2,19 +2,18 @@
    See the file COPYING for copying permission.
 */
 
+#include <limits.h>  /* INT_MAX */
 #include <stddef.h>
 
 
-#ifdef _MSC_VER
-#include <io.h>
-#define x_open _open
-#define x_close _close
-#define x_read _read
-#else
-#define x_open open
-#define x_close close
-#define x_read read
-#endif
+/* The following limit (for XML_Parse's int len) derives from
+ * this loop in xmparse.c:
+ *
+ *    do {
+ *      bufferSize = (int) (2U * (unsigned) bufferSize);
+ *    } while (bufferSize < neededSize && bufferSize > 0);
+ */
+#define XML_MAX_CHUNK_LEN  (INT_MAX / 2 + 1)
 
 
 #ifdef XML_UNICODE

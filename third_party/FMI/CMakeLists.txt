@@ -30,7 +30,7 @@ ELSE()
   ADD_DEFINITIONS( "-w -fPIC" )
 ENDIF()
 
-TARGET_LINK_LIBRARIES( epfmiimport epexpat zlibstatic )
+TARGET_LINK_LIBRARIES( epfmiimport expat zlibstatic )
 
 if( UNIX )
 set_target_properties(

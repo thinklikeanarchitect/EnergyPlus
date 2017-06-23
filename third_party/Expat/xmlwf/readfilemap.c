@@ -8,16 +8,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#ifdef __WATCOMC__
-#ifndef __LINUX__
-#include <io.h>
-#else
-#include <unistd.h>
-#endif
-#endif
-
-#ifdef __BEOS__
-#include <unistd.h>
+/* Functions close(2) and read(2) */
+#if !defined(_WIN32) && !defined(_WIN64)
+# include <unistd.h>
 #endif
 
 #ifndef S_ISREG
@@ -51,48 +44,55 @@ filemap(const char *name,
   struct stat sb;
   void *p;
 
-  fd = x_open(name, O_RDONLY|O_BINARY);
+  fd = open(name, O_RDONLY|O_BINARY);
   if (fd < 0) {
     perror(name);
     return 0;
   }
   if (fstat(fd, &sb) < 0) {
     perror(name);
+    close(fd);
     return 0;
   }
   if (!S_ISREG(sb.st_mode)) {
     fprintf(stderr, "%s: not a regular file\n", name);
+    close(fd);
     return 0;
   }
+  if (sb.st_size > XML_MAX_CHUNK_LEN) {
+    close(fd);
+    return 2;  /* Cannot be passed to XML_Parse in one go */
+  }
+
   nbytes = sb.st_size;
   /* malloc will return NULL with nbytes == 0, handle files with size 0 */
   if (nbytes == 0) {
     static const char c = '\0';
     processor(&c, 0, name, arg);
-    x_close(fd);
+    close(fd);
     return 1;
   }
   p = malloc(nbytes);
   if (!p) {
     fprintf(stderr, "%s: out of memory\n", name);
-    x_close(fd);
+    close(fd);
     return 0;
   }
-  n = x_read(fd, p, nbytes);
+  n = read(fd, p, nbytes);
   if (n < 0) {
     perror(name);
     free(p);
-    x_close(fd);
+    close(fd);
     return 0;
   }
   if (n != nbytes) {
     fprintf(stderr, "%s: read unexpected number of bytes\n", name);
     free(p);
-    x_close(fd);
+    close(fd);
     return 0;
   }
   processor(p, nbytes, name, arg);
   free(p);
-  x_close(fd);
+  close(fd);
   return 1;
 }

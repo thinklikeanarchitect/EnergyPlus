@@ -30,14 +30,7 @@
 #define tcsrchr strrchr
 #define tcslen strlen
 #define tperror perror
-
-#ifdef _MSC_VER
-#include <io.h>
-#define topen _open
-#else
 #define topen open
-#endif
-
 #define tmain main
 #define tremove remove
 #endif /* not XML_UNICODE */

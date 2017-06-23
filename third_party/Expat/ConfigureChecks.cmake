@@ -1,6 +1,8 @@
 include(CheckIncludeFile)
+include(CheckIncludeFiles)
 include(CheckFunctionExists)
 include(CheckSymbolExists)
+include(TestBigEndian)
 
 check_include_file("dlfcn.h" HAVE_DLFCN_H)
 check_include_file("fcntl.h" HAVE_FCNTL_H)
@@ -20,17 +22,15 @@ check_symbol_exists("memmove" "string.h" HAVE_MEMMOVE)
 check_function_exists("mmap" HAVE_MMAP)
 
 #/* Define to 1 if you have the ANSI C header files. */
-set(STDC_HEADERS 1)
-# to lazy to implement:
-#set(WORDS_BIGENDIAN ON)
+check_include_files("stdlib.h;stdarg.h;string.h;float.h" STDC_HEADERS)
+
+test_big_endian(WORDS_BIGENDIAN)
 #/* 1234 = LIL_ENDIAN, 4321 = BIGENDIAN */
-set(BYTEORDER 1234)
-#/* Define to specify how much context to retain around the current parse point. */
-set(XML_CONTEXT_BYTES 1024)
-#/* Define to make parameter entity parsing functionality available. */
-set(XML_DTD 1)
-#/* Define to make XML Namespaces functionality available. */
-set(XML_NS 1)
+if(WORDS_BIGENDIAN)
+    set(BYTEORDER 4321)
+else(WORDS_BIGENDIAN)
+    set(BYTEORDER 1234)
+endif(WORDS_BIGENDIAN)
 
 if(HAVE_SYS_TYPES_H)
     check_symbol_exists("off_t" "sys/types.h" OFF_T)
