@@ -132,7 +132,7 @@ class SparseSetT {
   iterator InsertInternal(bool allow_existing, int i) {
     DebugCheckInvariants();
     if (static_cast<uint32_t>(i) >= static_cast<uint32_t>(max_size_)) {
-      assert(!"illegal index");
+      assert(false && "illegal index");
       // Semantically, end() would be better here, but we already know
       // the user did something stupid, so begin() insulates them from
       // dereferencing an invalid pointer.
@@ -183,11 +183,13 @@ void SparseSetT<Value>::resize(int max_size) {
 
     dense_.resize(max_size);
 
-#ifdef MEMORY_SANITIZER
+#if defined(__has_feature)
+#if __has_feature(memory_sanitizer)
     for (int i = max_size_; i < max_size; i++) {
       sparse_to_dense_[i] = 0xababababU;
       dense_[i] = 0xababababU;
     }
+#endif
 #endif
   }
   max_size_ = max_size;
@@ -224,11 +226,13 @@ template<typename Value> SparseSetT<Value>::SparseSetT(int max_size) {
   dense_.resize(max_size);
   size_ = 0;
 
-#ifdef MEMORY_SANITIZER
+#if defined(__has_feature)
+#if __has_feature(memory_sanitizer)
   for (int i = 0; i < max_size; i++) {
     sparse_to_dense_[i] = 0xababababU;
     dense_[i] = 0xababababU;
   }
+#endif
 #endif
 
   DebugCheckInvariants();

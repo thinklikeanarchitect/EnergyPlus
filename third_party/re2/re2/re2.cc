@@ -200,8 +200,6 @@ void RE2::Init(const StringPiece& pattern, const Options& options) {
     return;
   }
 
-  prefix_.clear();
-  prefix_foldcase_ = false;
   re2::Regexp* suffix;
   if (entire_regexp_->RequiredPrefix(&prefix_, &prefix_foldcase_, &suffix))
     suffix_regexp_ = suffix;
@@ -399,7 +397,13 @@ int RE2::GlobalReplace(string *str,
   const char* lastend = NULL;
   string out;
   int count = 0;
+#ifdef FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
+  // Iterate just once when fuzzing. Otherwise, we easily get bogged down
+  // and coverage is unlikely to improve despite significant expense.
+  while (p == str->data()) {
+#else
   while (p <= ep) {
+#endif
     if (!re.Match(*str, static_cast<size_t>(p - str->data()),
                   str->size(), UNANCHORED, vec, nvec))
       break;
@@ -532,7 +536,7 @@ bool RE2::PossibleMatchRange(string* min, string* max, int maxlen) const {
   if (maxlen > 0 && prog_->PossibleMatchRange(&dmin, &dmax, maxlen)) {
     pmin += dmin;
     pmax += dmax;
-  } else if (pmax.size() > 0) {
+  } else if (!pmax.empty()) {
     // prog_->PossibleMatchRange has failed us,
     // but we still have useful information from prefix_.
     // Round up pmax to allow any possible suffix.
