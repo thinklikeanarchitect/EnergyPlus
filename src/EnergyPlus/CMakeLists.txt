@@ -10,8 +10,10 @@ if(NOT PROFILE_USE)
 endif()
 
 SET( SRC
-  "${CMAKE_SOURCE_DIR}/third_party/milo/dtoa.hpp"
-  "${CMAKE_SOURCE_DIR}/third_party/milo/itoa.hpp"
+  "${CMAKE_SOURCE_DIR}/third_party/milo/dtoa.h"
+  "${CMAKE_SOURCE_DIR}/third_party/milo/itoa.h"
+  "${CMAKE_SOURCE_DIR}/third_party/milo/diyfp.h"
+  "${CMAKE_SOURCE_DIR}/third_party/milo/ieee754.h"
   Timer.h
   AirflowNetworkBalanceManager.cc
   AirflowNetworkBalanceManager.hh

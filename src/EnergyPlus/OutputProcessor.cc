@@ -80,8 +80,8 @@
 #include <SortAndStringUtilities.hh>
 #include <SQLiteProcedures.hh>
 #include <UtilityRoutines.hh>
-#include <milo/dtoa.hpp>
-#include <milo/itoa.hpp>
+#include <milo/dtoa.h>
+#include <milo/itoa.h>
 #include "re2/re2.h"
 
 namespace EnergyPlus {
