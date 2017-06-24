@@ -28,7 +28,7 @@ ENDIF()
 
 ADD_EXECUTABLE( parser ${SRC} )
 
-TARGET_LINK_LIBRARIES( parser expat zlibstatic )
+TARGET_LINK_LIBRARIES( parser expat miniziplib )
 
 INSTALL( TARGETS parser
   RUNTIME DESTINATION PreProcess/FMUParser

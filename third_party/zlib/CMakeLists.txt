@@ -216,6 +216,41 @@ elseif(BUILD_SHARED_LIBS AND WIN32)
     set_target_properties(zlib PROPERTIES SUFFIX "1.dll")
 endif()
 
+#============================================================================
+# minizip
+#============================================================================
+
+IF(APPLE)
+  add_definitions("-Dftello64=ftello")
+  add_definitions("-Dfseeko64=fseeko")
+  add_definitions("-Dfopen64=fopen")
+ENDIF(APPLE)
+
+set(minizip_src
+    "contrib/minizip/ioapi.c"
+    "contrib/minizip/miniunz.c"
+    "contrib/minizip/minizip.c"
+    "contrib/minizip/unzip.c"
+    "contrib/minizip/zip.c"
+)
+
+IF(MSVC)
+  LIST(APPEND minizip_src "contrib/minizip/iowin32.c")
+ELSE(MSVC)
+  add_definitions(-Dunix)
+  add_definitions(-fPIC)
+ENDIF(MSVC)
+
+add_library(miniziplib STATIC ${ZLIB_SRCS} ${ZLIB_PUBLIC_HDRS} ${ZLIB_PRIVATE_HDRS} ${minizip_src})
+
+if( MSVC )
+  if( CMAKE_SIZEOF_VOID_P EQUAL 8 )
+    set_target_properties(miniziplib PROPERTIES STATIC_LIBRARY_FLAGS "/machine:x64")
+  else()
+    set_target_properties(miniziplib PROPERTIES STATIC_LIBRARY_FLAGS "/machine:x86")
+  endif()
+endif()
+
 # if(NOT SKIP_INSTALL_LIBRARIES AND NOT SKIP_INSTALL_ALL )
 #     install(TARGETS zlib zlibstatic
 #         RUNTIME DESTINATION "${INSTALL_BIN_DIR}"

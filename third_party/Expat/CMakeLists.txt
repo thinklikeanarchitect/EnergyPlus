@@ -73,6 +73,12 @@ else(BUILD_shared)
     endif(WIN32)
 endif(BUILD_shared)
 
+IF( MSVC )
+  ADD_DEFINITIONS( "/w" )
+ELSE()
+  ADD_DEFINITIONS( "-w -fPIC" )
+ENDIF()
+
 add_library(expat ${_SHARED} ${expat_SRCS})
 
 set(LIBCURRENT 7)   # sync
