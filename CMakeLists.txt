@@ -134,15 +134,8 @@ INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/valijson )
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/gtest/include/ SYSTEM )
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/ObjexxFCL/src/ )
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/SQLite/ SYSTEM )
-<<<<<<< HEAD
-INCLUDE_DIRECTORIES( "${CMAKE_SOURCE_DIR}/third_party/Expat" "${CMAKE_SOURCE_DIR}/third_party/Expat/lib" SYSTEM)
-INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/zlib/ )
-INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/CLI/ )
-INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/eigen/ )
-INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/jsoncpp)
-INCLUDE_DIRECTORIES( ${CMAKE_BINARY_DIR}/src/EnergyPlus)  # so that any source can #include <ConfiguredFunctions.hh>
-=======
 INCLUDE_DIRECTORIES( "${CMAKE_SOURCE_DIR}/third_party/Expat" "${CMAKE_SOURCE_DIR}/third_party/Expat/lib" SYSTEM )
+INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/zlib/ )
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/CLI/ )
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/third_party/eigen-3.3.2/ )
 INCLUDE_DIRECTORIES( ${CMAKE_BINARY_DIR}/src/EnergyPlus )  # so that any source can #include <ConfiguredFunctions.hh>
@@ -150,7 +143,6 @@ INCLUDE_DIRECTORIES( ${CMAKE_BINARY_DIR}/src/EnergyPlus )  # so that any source 
 #### Create interface for JSON for Modern C++ so we can include it in targets
 # add_library( ModernJSON INTERFACE )
 # target_include_directories( ModernJSON INTERFACE "${CMAKE_SOURCE_DIR}/third_party/nlohmann" "${CMAKE_SOURCE_DIR}/third_party/doj" )
->>>>>>> develop
 
 if( BUILD_TESTING )
   option( TEST_ANNUAL_SIMULATION "Use annual simulations for tests instead of only design days" OFF )

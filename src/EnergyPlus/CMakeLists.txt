@@ -11,16 +11,13 @@ if(NOT PROFILE_USE)
 endif()
 
 SET( SRC
-<<<<<<< HEAD
   "${CMAKE_SOURCE_DIR}/third_party/milo/dtoa.h"
   "${CMAKE_SOURCE_DIR}/third_party/milo/itoa.h"
   "${CMAKE_SOURCE_DIR}/third_party/milo/diyfp.h"
   "${CMAKE_SOURCE_DIR}/third_party/milo/ieee754.h"
   Timer.h
-=======
-  "${CMAKE_SOURCE_DIR}/third_party/milo/dtoa.hpp"
-  "${CMAKE_SOURCE_DIR}/third_party/milo/itoa.hpp"
->>>>>>> develop
+  # "${CMAKE_SOURCE_DIR}/third_party/milo/dtoa.hpp"
+  # "${CMAKE_SOURCE_DIR}/third_party/milo/itoa.hpp"
   AirflowNetworkBalanceManager.cc
   AirflowNetworkBalanceManager.hh
   AirflowNetworkSolver.cc
@@ -643,12 +640,8 @@ add_custom_target( GenerateEmbeddedEpJSONSchema
 # first we will create a static library of EnergyPlus
 # this will be linked statically to create the DLL and also the unit tests
 add_library( energypluslib STATIC ${SRC} )
-<<<<<<< HEAD
-target_link_libraries( energypluslib objexx sqlite bcvtb expat epfmiimport re2 DElight jsoncpp libkiva)
-=======
-target_link_libraries( energypluslib objexx sqlite bcvtb epexpat epfmiimport re2 DElight libkiva )
+target_link_libraries( energypluslib objexx sqlite bcvtb expat epfmiimport re2 DElight libkiva )
 add_dependencies( energypluslib GenerateEmbeddedEpJSONSchema )
->>>>>>> develop
 if(BUILD_GROUND_PLOT)
   set_source_files_properties(HeatBalanceKivaManager.cc PROPERTIES COMPILE_DEFINITIONS GROUND_PLOT)
   target_link_libraries( energypluslib groundplot )
