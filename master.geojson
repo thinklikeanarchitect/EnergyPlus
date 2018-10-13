@@ -28789,6 +28789,19 @@
         {
             "type": "Feature",
             "properties": {
+                "Location": "TUR_Bursa.171160_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/BU_Bursa/TUR_BU_Bursa_171160_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [28.96, 40.22]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
                 "Location": "TUR_Istanbul.170600_IWEC",
                 "Weather File": "<a href=https://energyplus.net/weather-download/europe_wmo_region_6/TUR//TUR_Istanbul.170600_IWEC/TUR_Istanbul.170600_IWEC.epw download download>Download *.epw File</a>"
             },
