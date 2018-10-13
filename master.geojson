@@ -28802,6 +28802,58 @@
         {
             "type": "Feature",
             "properties": {
+                "Location": "TUR_Manisa_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/MN_Manisa/TUR_MN_Manisa_171860_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.26, 38.60]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Diyarbakır_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/DY_Diyarbakir/TUR_DY_Diyarbakir_172800_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.09, 37.92]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Erzurum_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/EM_Erzurum/TUR_EM_Erzurum_170960_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [41.22, 39.91]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Edirne_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/ED_Edirne/TUR_ED_Edirne_170500_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [26.53, 41.66]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
                 "Location": "TUR_Istanbul.170600_IWEC",
                 "Weather File": "<a href=https://energyplus.net/weather-download/europe_wmo_region_6/TUR//TUR_Istanbul.170600_IWEC/TUR_Istanbul.170600_IWEC.epw download download>Download *.epw File</a>"
             },
