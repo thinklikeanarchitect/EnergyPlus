@@ -28764,7 +28764,7 @@
             "type": "Feature",
             "properties": {
                 "Location": "TUR_Ankara.171280_IWEC",
-                "Weather File": "<a href=https://energyplus.net/weather-download/europe_wmo_region_6/TUR//TUR_Ankara.171280_IWEC/TUR_Ankara.171280_IWEC.epw download download>Download *.epw File</a>"
+                "Weather File": "<a href=https://energyplus.net/weather-download/europe_wmo_region_6/TUR//TUR_Ankara.171280_IWEC/TUR_Ankara.171280_IWEC.zip download download>Download *.epw File</a>"
             },
             "geometry": {
                 "type": "Point",
