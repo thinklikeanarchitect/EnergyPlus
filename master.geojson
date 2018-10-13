@@ -28828,6 +28828,32 @@
         {
             "type": "Feature",
             "properties": {
+                "Location": "TUR_Sivas_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/SV_Sivas/TUR_SV_Sivas_170900_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.01, 39.75]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Samsun_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/SS_Samsun/TUR_SS_Samsun_170300_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.33, 41.28]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
                 "Location": "TUR_Erzurum_IWEC",
                 "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/EM_Erzurum/TUR_EM_Erzurum_170960_TurTMY.zip download download>Download *.zip File</a>"
             },
