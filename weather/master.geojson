@@ -28842,7 +28842,7 @@
             "type": "Feature",
             "properties": {
                 "Location": "TUR_Mugla_IWEC",
-                "Weather File": "<a http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/MG_Mugla/TUR_MG_Mugla_172920_TurTMY.zip download download>Download *.zip File</a>"
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/MG_Mugla/TUR_MG_Mugla_172920_TurTMY.zip download download>Download *.zip File</a>"
             },
             "geometry": {
                 "type": "Point",
@@ -28855,7 +28855,7 @@
             "type": "Feature",
             "properties": {
                 "Location": "TUR_Afyonkarahisar_IWEC",
-                "Weather File": "<a http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/AF_Afyonkarahisar/TUR_AF_Afyonkarahisar_171900_TurTMY.zip download download>Download *.zip File</a>"
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/AF_Afyonkarahisar/TUR_AF_Afyonkarahisar_171900_TurTMY.zip download download>Download *.zip File</a>"
             },
             "geometry": {
                 "type": "Point",
@@ -28868,7 +28868,7 @@
             "type": "Feature",
             "properties": {
                 "Location": "TUR_Zonguldak_IWEC",
-                "Weather File": "<a http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/ZO_Zonguldak/TUR_ZO_Zonguldak_170220_TurTMY.zip download download>Download *.zip File</a>"
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/ZO_Zonguldak/TUR_ZO_Zonguldak_170220_TurTMY.zip download download>Download *.zip File</a>"
             },
             "geometry": {
                 "type": "Point",
