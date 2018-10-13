@@ -28841,6 +28841,19 @@
         {
             "type": "Feature",
             "properties": {
+                "Location": "TUR_Mugla_IWEC",
+                "Weather File": "<a http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/MG_Mugla/TUR_MG_Mugla_172920_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.92, 36.93]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
                 "Location": "TUR_Diyarbakır_IWEC",
                 "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/DY_Diyarbakir/TUR_DY_Diyarbakir_172800_TurTMY.zip download download>Download *.zip File</a>"
             },
