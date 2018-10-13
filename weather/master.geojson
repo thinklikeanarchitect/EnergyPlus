@@ -28781,7 +28781,163 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [37.00, 35.32]
+                "coordinates": [35.32, 37.00]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Bursa.171160_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/BU_Bursa/TUR_BU_Bursa_171160_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [28.96, 40.22]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Manisa_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/MN_Manisa/TUR_MN_Manisa_171860_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [27.41, 38.60]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Sanliurfa_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/SU_Sanliurfa/TUR_SU_Sanliurfa_172700_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [38.78, 37.16]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Konya_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/KO_Konya/TUR_KO_Konya_172440_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.46, 37.87]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Diyarbakır_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/DY_Diyarbakir/TUR_DY_Diyarbakir_172800_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [40.20, 37.92]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Sivas_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/SV_Sivas/TUR_SV_Sivas_170900_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.01, 39.75]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Samsun_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/SS_Samsun/TUR_SS_Samsun_170300_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.33, 41.28]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Erzurum_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/EM_Erzurum/TUR_EM_Erzurum_170960_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [41.22, 39.91]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Eskisehir_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/ES_Eskisehir/TUR_ES_Eskisehir_171240_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [30.50, 39.76]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Antalya_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/AL_Antalya/TUR_AL_Antalya_173000_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [30.70, 36.90]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Trabzon_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/TB_Trabzon/TUR_TB_Trabzon_170380_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [39.71, 41.00]
+            }
+        }
+,
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Location": "TUR_Edirne_IWEC",
+                "Weather File": "<a href=http://climate.onebuilding.org/WMO_Region_6_Europe/TUR_Turkey/ED_Edirne/TUR_ED_Edirne_170500_TurTMY.zip download download>Download *.zip File</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [26.53, 41.66]
             }
         }
 ,
